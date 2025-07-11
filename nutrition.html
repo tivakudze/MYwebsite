@@ -9,14 +9,33 @@
       font-family: Arial, sans-serif;
       background: #1c1c1c;
       color: white;
+      margin: 0;
       padding: 2rem;
+    }
+    nav {
+      background: #2f3a2f;
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav a {
+      color: #f39c12;
+      margin: 0.5rem 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     h1 {
       color: #f39c12;
+      text-align: center;
     }
     form {
       max-width: 600px;
-      margin: auto;
+      margin: 2rem auto;
       background: #2f3a2f;
       padding: 2rem;
       border-radius: 10px;
@@ -28,42 +47,39 @@
     input, select, textarea, button {
       width: 100%;
       padding: 0.5rem;
+      margin-top: 0.5rem;
+      border-radius: 5px;
       border: 1px solid #f39c12;
       background: transparent;
       color: white;
-      margin-top: 0.5rem;
-      border-radius: 5px;
     }
     button {
-      background-color: #f39c12;
-      color: #2f3a2f;
+      background: #f39c12;
+      color: #1c1c1c;
       font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #e67e22;
     }
   </style>
 </head>
 <body>
-<nav style="width:100%; background:#2f3a2f; padding:1rem; text-align:center;">
-    <a href="index.html" style="color:#f39c12; margin: 0 1rem;">Home</a>
-    <a href="training.html" style="color:#f39c12; margin: 0 1rem;">Training</a>
-    <a href="nutrition.html" style="color:#f39c12; margin: 0 1rem;">Nutrition</a>
-    <a href="membership.html" style="color:#f39c12; margin: 0 1rem;">Membership</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="training.html">Training</a>
+    <a href="nutrition.html">Nutrition</a>
+    <a href="membership.html">Membership</a>
   </nav>
-  <h1>Nutritional Guidance Form</h1>
-  <form>
+
+  <h1>Nutritional Guidance Questionnaire</h1>
+  <form action="https://formspree.io/f/xgvygneg" method="POST">
+    <input type="hidden" name="_next" value="membership.html" />
     <label>Full Name: <input type="text" name="name" required></label>
-    <label>What is your current diet like?<textarea name="diet" rows="3"></textarea></label>
-    <label>Do you have any allergies? <input type="text" name="allergies"></label>
-    <label>Are you currently taking any supplements? <input type="text" name="supplements"></label>
-    <label>Nutrition Services Interested In:
-      <select name="services">
-        <option>Personalised Meal Plans</option>
-        <option>Supplements Advice</option>
-        <option>Pre & Post Workout Nutrition</option>
-        <option>Nutrient Timing</option>
-        <option>All of the above</option>
-      </select>
-    </label>
-    <label>Meal Preferences:
+    <label>Current Diet: <textarea name="diet" rows="3"></textarea></label>
+    <label>Allergies: <input type="text" name="allergies"></label>
+    <label>Supplements: <input type="text" name="supplements"></label>
+    <label>Meal Preference:
       <select name="meals">
         <option>High Protein</option>
         <option>Vegetarian</option>
@@ -71,13 +87,16 @@
         <option>Balanced</option>
       </select>
     </label>
-    <label>Number of meals per day: <input type="number" name="meals_per_day" min="1" max="10"></label>
-    <label>Do you snack between meals?<select><option>Yes</option><option>No</option></select></label>
-    <label>Favorite meal of the day: <input type="text" name="favorite_meal"></label>
-    <label>Water intake per day (litres): <input type="number" name="water_intake" step="0.1"></label>
-    <label>Do you cook at home or eat out more?<select><option>Cook at home</option><option>Eat out</option></select></label>
-    <label>What is your nutrition goal?<input type="text" name="nutrition_goal"></label>
-    <label>Do you have a calorie goal? <input type="number" name="calorie_target"></label>
+    <label>Meals per Day: <input type="number" name="meals_per_day"></label>
+    <label>Snacking?: <select name="snacking"><option>Yes</option><option>No</option></select></label>
+    <label>Favorite Meal: <input type="text" name="favorite_meal"></label>
+    <label>Water Intake (L): <input type="number" name="water_intake" step="0.1"></label>
+    <label>Cooking Style: <select name="cooking"><option>Cook at home</option><option>Eat out</option></select></label>
+    <label>Fruits/Veggies: <input type="text" name="fruits_veggies"></label>
+    <label>Past Diet Plans: <textarea name="diet_plan"></textarea></label>
+    <label>Nutrition Goal: <input type="text" name="nutrition_goal"></label>
+    <label>Meal Prepping?: <select name="meal_prepping"><option>Yes</option><option>No</option></select></label>
+    <label>Calorie Target: <input type="number" name="calorie_target"></label>
     <button type="submit">Submit</button>
   </form>
 </body>

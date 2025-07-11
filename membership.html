@@ -2,21 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Membership Options | Coach Jay</title>
+  <title>Membership | Coach Jay</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: Arial, sans-serif;
       background: #1c1c1c;
       color: white;
+      margin: 0;
       padding: 2rem;
+    }
+    nav {
+      background: #2f3a2f;
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav a {
+      color: #f39c12;
+      margin: 0.5rem 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     h1 {
       color: #f39c12;
+      text-align: center;
     }
     form {
       max-width: 600px;
-      margin: auto;
+      margin: 2rem auto;
       background: #2f3a2f;
       padding: 2rem;
       border-radius: 10px;
@@ -28,31 +47,36 @@
     input, select, textarea, button {
       width: 100%;
       padding: 0.5rem;
+      margin-top: 0.5rem;
+      border-radius: 5px;
       border: 1px solid #f39c12;
       background: transparent;
       color: white;
-      margin-top: 0.5rem;
-      border-radius: 5px;
     }
     button {
-      background-color: #f39c12;
-      color: #2f3a2f;
+      background: #f39c12;
+      color: #1c1c1c;
       font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #e67e22;
     }
   </style>
 </head>
 <body>
-<nav style="width:100%; background:#2f3a2f; padding:1rem; text-align:center;">
-    <a href="index.html" style="color:#f39c12; margin: 0 1rem;">Home</a>
-    <a href="training.html" style="color:#f39c12; margin: 0 1rem;">Training</a>
-    <a href="nutrition.html" style="color:#f39c12; margin: 0 1rem;">Nutrition</a>
-    <a href="membership.html" style="color:#f39c12; margin: 0 1rem;">Membership</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="training.html">Training</a>
+    <a href="nutrition.html">Nutrition</a>
+    <a href="membership.html">Membership</a>
   </nav>
+
   <h1>Membership Registration</h1>
-  <form>
+  <form action="https://formspree.io/f/xgvygneg" method="POST">
+    <input type="hidden" name="_next" value="index.html" />
     <label>Full Name: <input type="text" name="name" required></label>
     <label>Contact Number: <input type="tel" name="phone" required></label>
-    <label>Email Address: <input type="email" name="email"></label>
     <label>Choose a Plan:
       <select name="plan">
         <option>$5 / Week</option>
@@ -66,12 +90,4 @@
         <option>Email</option>
       </select>
     </label>
-    <label>Do you currently have a gym membership?<select><option>Yes</option><option>No</option></select></label>
-    <label>Primary fitness goals:<textarea name="goals"></textarea></label>
-    <label>Preferred workout time:<input type="text" name="preferred_time"></label>
-    <label>Where did you hear about us?<input type="text" name="referral"></label>
-    <label>Special requests or comments:<textarea name="comments"></textarea></label>
-    <button type="submit">Submit</button>
-  </form>
-</body>
-</html>
+    <label>Primary Fitness Goals: <textarea name="fitness_goals" rows="2"></_
