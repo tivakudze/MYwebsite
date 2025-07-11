@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Personalized Training | Coach Jay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #1c1c1c;
+      color: white;
+      padding: 2rem;
+    }
+    h1 {
+      color: #f39c12;
+    }
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: #2f3a2f;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+    label {
+      display: block;
+      margin-bottom: 1rem;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #f39c12;
+      background: transparent;
+      color: white;
+      margin-top: 0.5rem;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #f39c12;
+      color: #2f3a2f;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<nav style="width:100%; background:#2f3a2f; padding:1rem; text-align:center;">
+    <a href="index.html" style="color:#f39c12; margin: 0 1rem;">Home</a>
+    <a href="training.html" style="color:#f39c12; margin: 0 1rem;">Training</a>
+    <a href="nutrition.html" style="color:#f39c12; margin: 0 1rem;">Nutrition</a>
+    <a href="membership.html" style="color:#f39c12; margin: 0 1rem;">Membership</a>
+  </nav>
+  <h1>Personalized Training Questionnaire</h1>
+  <form>
+    <label>Full Name: <input type="text" name="name" required></label>
+    <label>Current Fitness Level:
+      <select name="level">
+        <option>Beginner</option>
+        <option>Intermediate</option>
+        <option>Advanced</option>
+      </select>
+    </label>
+    <label>Preferred Training Style:
+      <select name="style">
+        <option>Strength Training</option>
+        <option>Cardio</option>
+        <option>HIIT</option>
+        <option>Flexibility</option>
+        <option>Mixed</option>
+      </select>
+    </label>
+    <label>What are your fitness goals?<textarea name="goals"></textarea></label>
+    <label>How many days per week can you train?<input type="number" name="days" min="1" max="7"></label>
+    <label>Do you have any injuries or conditions?<textarea name="injuries"></textarea></label>
+    <label>Do you have access to a gym or equipment?<textarea name="equipment"></textarea></label>
+    <label>Preferred workout time:<input type="text" name="workout_time"></label>
+    <label>Do you prefer 1-on-1 attention?<select><option>Yes</option><option>No</option></select></label>
+    <label>Would you like progress tracking?<select><option>Yes</option><option>No</option></select></label>
+    <label>Have you worked with a coach before?<select><option>Yes</option><option>No</option></select></label>
+    <label>What motivates you to train?<textarea name="motivation"></textarea></label>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

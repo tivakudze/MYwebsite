@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Membership Options | Coach Jay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #1c1c1c;
+      color: white;
+      padding: 2rem;
+    }
+    h1 {
+      color: #f39c12;
+    }
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: #2f3a2f;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+    label {
+      display: block;
+      margin-bottom: 1rem;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #f39c12;
+      background: transparent;
+      color: white;
+      margin-top: 0.5rem;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #f39c12;
+      color: #2f3a2f;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<nav style="width:100%; background:#2f3a2f; padding:1rem; text-align:center;">
+    <a href="index.html" style="color:#f39c12; margin: 0 1rem;">Home</a>
+    <a href="training.html" style="color:#f39c12; margin: 0 1rem;">Training</a>
+    <a href="nutrition.html" style="color:#f39c12; margin: 0 1rem;">Nutrition</a>
+    <a href="membership.html" style="color:#f39c12; margin: 0 1rem;">Membership</a>
+  </nav>
+  <h1>Membership Registration</h1>
+  <form>
+    <label>Full Name: <input type="text" name="name" required></label>
+    <label>Contact Number: <input type="tel" name="phone" required></label>
+    <label>Email Address: <input type="email" name="email"></label>
+    <label>Choose a Plan:
+      <select name="plan">
+        <option>$5 / Week</option>
+        <option>$40 / Month</option>
+      </select>
+    </label>
+    <label>Preferred Contact Method:
+      <select name="contact">
+        <option>WhatsApp</option>
+        <option>Phone Call</option>
+        <option>Email</option>
+      </select>
+    </label>
+    <label>Do you currently have a gym membership?<select><option>Yes</option><option>No</option></select></label>
+    <label>Primary fitness goals:<textarea name="goals"></textarea></label>
+    <label>Preferred workout time:<input type="text" name="preferred_time"></label>
+    <label>Where did you hear about us?<input type="text" name="referral"></label>
+    <label>Special requests or comments:<textarea name="comments"></textarea></label>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

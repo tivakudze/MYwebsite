@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Coach Jay Fitness</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #1c1c1c;
+      color: white;
+      margin: 0;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Watermark background filling whole page */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('images/logo.jpg') no-repeat center center;
+      background-size: cover;
+      opacity: 0.1;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Watermark text at the bottom in light olive green */
+    body::after {
+      content: "DARE TO BE GREAT";
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 4rem;
+      font-weight: bold;
+      color: rgba(173, 216, 105, 0.15); /* light olive green with low opacity */
+      letter-spacing: 8px;
+      z-index: 0;
+      pointer-events: none;
+      font-family: 'Arial Black', Arial, sans-serif;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    /* All content above watermark */
+    body > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    nav {
+      background: rgba(47, 58, 47, 0.8);
+      padding: 1rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+    }
+    nav a {
+      color: #f39c12;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h1, p {
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="training.html">Training</a>
+    <a href="nutrition.html">Nutrition</a>
+    <a href="membership.html">Membership</a>
+  </nav>
+
+  <h1>Welcome to Coach Jay Fitness</h1>
+  <p>Combining exercise and nutrition to help you build muscle faster</p>
+</body>
+</html>
