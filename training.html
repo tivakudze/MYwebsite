@@ -34,7 +34,7 @@
       text-align: center;
     }
     form {
-      max-width: 600px;
+      max-width: 700px;
       margin: 2rem auto;
       background: #2f3a2f;
       padding: 2rem;
@@ -75,7 +75,20 @@
   <h1>Personalized Training Questionnaire</h1>
   <form action="https://formspree.io/f/xkgbdqea" method="POST">
     <input type="hidden" name="_next" value="membership.html" />
+
     <label>Full Name: <input type="text" name="name" required></label>
+    <label>Age: <input type="number" name="age" min="10" required></label>
+    <label>Gender:
+      <select name="gender" required>
+        <option value="" disabled selected>Select</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Non-binary</option>
+        <option>Prefer not to say</option>
+      </select>
+    </label>
+    <label>Weight (kg): <input type="number" name="weight" required></label>
+
     <label>Fitness Level:
       <select name="level">
         <option>Beginner</option>
@@ -93,14 +106,42 @@
       </select>
     </label>
     <label>Goals: <textarea name="goals"></textarea></label>
-    <label>Days/Week: <input type="number" name="days" min="1" max="7"></label>
-    <label>Injuries: <textarea name="injuries"></textarea></label>
-    <label>Equipment: <textarea name="equipment"></textarea></label>
-    <label>Workout Time: <input type="text" name="workout_time"></label>
-    <label>One-on-One?: <select name="one_on_one"><option>Yes</option><option>No</option></select></label>
-    <label>Progress Tracking?: <select name="tracking"><option>Yes</option><option>No</option></select></label>
-    <label>Coach Experience?: <select name="coach_experience"><option>Yes</option><option>No</option></select></label>
-    <label>Motivation: <textarea name="motivation"></textarea></label>
+    <label>Preferred Training Days: <input type="text" name="training_days" placeholder="e.g., Monday, Wednesday, Friday"></label>
+    <label>Preferred Time of Day:
+      <select name="training_time">
+        <option>Morning</option>
+        <option>Afternoon</option>
+        <option>Evening</option>
+        <option>Flexible</option>
+      </select>
+    </label>
+    <label>Workout Location:
+      <select name="location">
+        <option>Home</option>
+        <option>Gym</option>
+        <option>Outdoor</option>
+        <option>Online</option>
+      </select>
+    </label>
+    <label>Nutrition Considerations: <textarea name="nutrition"></textarea></label>
+    <label>Allergies or Medical Conditions: <textarea name="allergies"></textarea></label>
+    <label>Current or Past Fitness Programs: <textarea name="past_programs"></textarea></label>
+    <label>Days/Week Available: <input type="number" name="days" min="1" max="7"></label>
+    <label>Injuries or Physical Limitations: <textarea name="injuries"></textarea></label>
+    <label>Available Equipment: <textarea name="equipment"></textarea></label>
+    <label>Workout Duration per Session (e.g., 30 mins): <input type="text" name="workout_time"></label>
+    <label>Interested in One-on-One Coaching?:
+      <select name="one_on_one"><option>Yes</option><option>No</option></select>
+    </label>
+    <label>Would You Like Progress Tracking?:
+      <select name="tracking"><option>Yes</option><option>No</option></select>
+    </label>
+    <label>Worked with a Coach Before?:
+      <select name="coach_experience"><option>Yes</option><option>No</option></select>
+    </label>
+    <label>Motivation or Inspiration Behind Joining: <textarea name="motivation"></textarea></label>
+    <label>Additional Comments or Preferences: <textarea name="comments"></textarea></label>
+
     <button type="submit">Submit</button>
   </form>
 </body>
